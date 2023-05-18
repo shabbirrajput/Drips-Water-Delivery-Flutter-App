@@ -1,3 +1,4 @@
+import 'package:drips_water/screens/splash/screen_splash.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
+      home: const ScreenSplash(),
     );
   }
 }
