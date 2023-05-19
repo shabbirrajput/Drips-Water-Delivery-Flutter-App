@@ -14,4 +14,14 @@ class AppString {
   static const textCreateAnAccount = 'CREATE AN ACCOUNT';
   static const textLogin = 'LOGIN';
   static const textContinueAsGuest = 'Continue as Guest';
+  static const textWelcomeBack = 'Welcome Back!';
+  static const textPleaseFillInYourEmailPasswordToLoginToYourAccount =
+      'Please fill in your email password to login to your account.';
+  static const textEmail = 'Email';
+  static const textPassword = 'Password';
+  static const textForgotPassword = 'Forgot Password?';
+  static const textDontHaveAnAccount = 'Don’t  have an account?';
+  static const textSignUp = ' Sign Up';
+  static const textEnterEmail = 'Enter Email';
+  static const textEnterPassword = 'Enter Password';
 }

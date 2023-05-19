@@ -3,6 +3,7 @@ import 'package:drips_water/core/app_dimens.dart';
 import 'package:drips_water/core/app_fonts.dart';
 import 'package:drips_water/core/app_image.dart';
 import 'package:drips_water/core/app_string.dart';
+import 'package:drips_water/screens/auth/screen_login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -97,7 +98,12 @@ class _ScreenWelcomeState extends State<ScreenWelcome> {
                     height: Dimens.margin60,
                     width: double.infinity,
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ScreenLogin()));
+                      },
                       style: TextButton.styleFrom(
                           shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.all(Radius.zero)),
