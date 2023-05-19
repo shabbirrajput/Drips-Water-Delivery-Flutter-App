@@ -1,19 +1,18 @@
 import 'package:drips_water/core/app_color.dart';
 import 'package:drips_water/core/app_dimens.dart';
 import 'package:drips_water/core/app_string.dart';
-import 'package:drips_water/screens/auth/screen_registeration.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ScreenLogin extends StatefulWidget {
-  const ScreenLogin({Key? key}) : super(key: key);
+class ScreenRegisteration extends StatefulWidget {
+  const ScreenRegisteration({Key? key}) : super(key: key);
 
   @override
-  State<ScreenLogin> createState() => _ScreenLoginState();
+  State<ScreenRegisteration> createState() => _ScreenRegisterationState();
 }
 
-class _ScreenLoginState extends State<ScreenLogin> {
+class _ScreenRegisterationState extends State<ScreenRegisteration> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,7 +38,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
               Align(
                 alignment: Alignment.topLeft,
                 child: Text(
-                  AppString.textWelcomeBack,
+                  AppString.textCreateYourAccount,
                   style: TextStyle(
                     color: AppColors.colorPrimary,
                     fontFamily: GoogleFonts.poppins().toString(),
@@ -52,7 +51,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 height: Dimens.margin12,
               ),
               Text(
-                AppString.textPleaseFillInYourEmailPasswordToLoginToYourAccount,
+                AppString.textPleaseFillInYourEmailPasswordToCreateYourAccount,
                 style: TextStyle(
                     color: AppColors.colorGrey,
                     fontFamily: GoogleFonts.poppins().toString(),
@@ -61,6 +60,33 @@ class _ScreenLoginState extends State<ScreenLogin> {
               ),
               const SizedBox(
                 height: Dimens.margin39,
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  AppString.textName,
+                  style: TextStyle(
+                      color: AppColors.colorGrey,
+                      fontFamily: GoogleFonts.poppins().toString(),
+                      fontSize: Dimens.textSize15,
+                      fontWeight: FontWeight.w700),
+                ),
+              ),
+              const SizedBox(
+                height: Dimens.margin7,
+              ),
+              const TextField(
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.zero),
+                  ),
+                  hintStyle: TextStyle(color: Colors.grey),
+                  hintText: AppString.textEnterName,
+                  /*fillColor: Colors.white70*/
+                ),
+              ),
+              const SizedBox(
+                height: Dimens.margin17,
               ),
               Align(
                 alignment: Alignment.topLeft,
@@ -87,7 +113,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 ),
               ),
               const SizedBox(
-                height: Dimens.margin19,
+                height: Dimens.margin17,
               ),
               Align(
                 alignment: Alignment.topLeft,
@@ -115,24 +141,35 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 ),
               ),
               const SizedBox(
-                height: Dimens.margin23,
+                height: Dimens.margin17,
               ),
-              InkWell(
-                onTap: () {},
-                child: Align(
-                  alignment: Alignment.topRight,
-                  child: Text(
-                    AppString.textForgotPassword,
-                    style: TextStyle(
-                        color: AppColors.colorGrey,
-                        fontFamily: GoogleFonts.poppins().toString(),
-                        fontSize: Dimens.textSize12,
-                        fontWeight: FontWeight.w600),
-                  ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  AppString.textConfirmPassword,
+                  style: TextStyle(
+                      color: AppColors.colorGrey,
+                      fontFamily: GoogleFonts.poppins().toString(),
+                      fontSize: Dimens.textSize15,
+                      fontWeight: FontWeight.w700),
                 ),
               ),
               const SizedBox(
-                height: Dimens.margin105,
+                height: Dimens.margin7,
+              ),
+              const TextField(
+                obscureText: true,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.zero),
+                  ),
+                  hintStyle: TextStyle(color: Colors.grey),
+                  hintText: AppString.textEnterPassword,
+                  /*fillColor: Colors.white70*/
+                ),
+              ),
+              const SizedBox(
+                height: Dimens.margin67,
               ),
               SizedBox(
                 height: Dimens.margin60,
@@ -144,7 +181,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                           borderRadius: BorderRadius.all(Radius.zero)),
                       backgroundColor: AppColors.colorPrimary),
                   child: Text(
-                    AppString.textLogin,
+                    AppString.textCreateAnAccount,
                     style: TextStyle(
                         color: AppColors.colorWhite,
                         fontFamily: GoogleFonts.poppins().toString(),
@@ -160,7 +197,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 TextSpan(
                   children: [
                     TextSpan(
-                      text: AppString.textDontHaveAnAccount,
+                      text: AppString.textAlreadyHaveAnAccount,
                       style: TextStyle(
                         fontSize: Dimens.textSize14,
                         decoration: TextDecoration.underline,
@@ -179,7 +216,7 @@ class _ScreenLoginState extends State<ScreenLogin> {
                             ),
                           );
                         },
-                      text: AppString.textSignUp,
+                      text: AppString.textSignIn,
                       style: TextStyle(
                         color: AppColors.colorPrimary,
                         fontFamily: GoogleFonts.poppins().toString(),

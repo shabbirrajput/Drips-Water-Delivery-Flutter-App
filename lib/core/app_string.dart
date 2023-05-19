@@ -21,7 +21,16 @@ class AppString {
   static const textPassword = 'Password';
   static const textForgotPassword = 'Forgot Password?';
   static const textDontHaveAnAccount = 'Don’t  have an account?';
+  static const textAlreadyHaveAnAccount = 'Already have an account?';
   static const textSignUp = ' Sign Up';
+  static const textSignIn = ' Sign in';
   static const textEnterEmail = 'Enter Email';
   static const textEnterPassword = 'Enter Password';
+  static const textCreateYourAccount = 'Create your Account';
+  static const textPleaseFillInYourEmailPasswordToCreateYourAccount =
+      'Please fill in your details to create your account';
+  static const textName = 'Name';
+  static const textEnterName = 'Enter Name';
+  static const textConfirmPassword = 'Confirm Password';
+  static const textEnterConfirmPassword = 'Enter Confirm Password';
 }
