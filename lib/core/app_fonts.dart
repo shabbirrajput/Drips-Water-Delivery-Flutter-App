@@ -42,4 +42,15 @@ class AppFont {
   ///-------SEMI BOLD-------------
   ///semiBoldBlack1-------
   static final semiBoldBlack1 = semiBold.copyWith(color: AppColors.colorBlack1);
+
+  /// A [getTextStyle] This Method Use to getTextStyle
+  TextStyle getTextStyle(TextStyle mainTextStyle, double size) {
+    return mainTextStyle.copyWith(fontSize: size);
+  }
+
+  /// A [getTextStyleFontWeight] This Method Use to get Text Style with FontWeight
+  TextStyle getTextStyleFontWeight(
+      TextStyle mainTextStyle, double size, FontWeight fontWeight) {
+    return mainTextStyle.copyWith(fontSize: size, fontWeight: fontWeight);
+  }
 }

@@ -45,7 +45,7 @@ class _ScreenOnBoardingState extends State<ScreenOnBoarding> {
       home: Scaffold(
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.all(Dimens.margin16),
             child: Column(
               children: [
                 Expanded(
@@ -70,7 +70,8 @@ class _ScreenOnBoardingState extends State<ScreenOnBoarding> {
                     ...List.generate(
                         onBoardData.length,
                         (index) => Padding(
-                              padding: const EdgeInsets.only(right: 4),
+                              padding:
+                                  const EdgeInsets.only(right: Dimens.margin4),
                               child:
                                   DotIndicator(isActive: index == _pageIndex),
                             )),
@@ -79,10 +80,9 @@ class _ScreenOnBoardingState extends State<ScreenOnBoarding> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    /*const Spacer(),*/
                     SizedBox(
-                      height: 60,
-                      width: 318,
+                      height: Dimens.margin60,
+                      width: Dimens.margin318,
                       child: ElevatedButton(
                           onPressed: () {
                             /// (condition) ? true:false
@@ -94,13 +94,15 @@ class _ScreenOnBoardingState extends State<ScreenOnBoarding> {
                                             const ScreenWelcome()),
                                   )
                                 : _pageController.nextPage(
-                                    curve: Curves.ease,
-                                    duration:
-                                        const Duration(microseconds: 300));
+                                    curve: Curves.easeInBack,
+                                    duration: Duration(
+                                        microseconds:
+                                            Dimens.margin300.toInt()));
                           },
-                          /*style: ElevatedButton.styleFrom(
-                              shape: const CircleBorder(),
-                              backgroundColor: Colors.deepPurpleAccent),*/
+                          style: ElevatedButton.styleFrom(
+                              shape: const RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.all(Radius.zero)),
+                              backgroundColor: AppColors.colorPrimary),
                           child: Text(_pageIndex <= 1
                               ? AppString.textNext
                               : AppString.textGetStarted)),
@@ -127,15 +129,14 @@ class DotIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      margin: const EdgeInsets.all(20.0),
-      duration: const Duration(microseconds: 300),
-      height: isActive ? 20 : 10,
-      width: 4,
+      margin: const EdgeInsets.all(Dimens.margin5),
+      duration: Duration(microseconds: Dimens.margin300.toInt()),
+      height: Dimens.margin6,
+      width: Dimens.margin23,
       decoration: BoxDecoration(
-          color: isActive
-              ? AppColors.colorPrimary
-              : AppColors.colorPrimary.withOpacity(0.4),
-          borderRadius: const BorderRadius.all(Radius.circular(12))),
+          color: isActive ? AppColors.colorPrimary : AppColors.colorWhite2,
+          borderRadius:
+              const BorderRadius.all(Radius.circular(Dimens.margin12))),
     );
   }
 }
@@ -179,28 +180,37 @@ class OnBoardContent extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const Spacer(),
+        const SizedBox(
+          height: Dimens.margin90,
+        ),
         SvgPicture.asset(
           image,
           height: Dimens.margin250,
         ),
-        const Spacer(),
-        Text(
-          title,
-          textAlign: TextAlign.center,
-          style: Theme.of(context)
-              .textTheme
-              .headlineSmall!
-              .copyWith(fontWeight: FontWeight.w500),
+        const SizedBox(
+          height: Dimens.margin29,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Dimens.margin37),
+          child: Text(
+            title,
+            textAlign: TextAlign.center,
+            style: Theme.of(context)
+                .textTheme
+                .headlineSmall!
+                .copyWith(fontWeight: FontWeight.w500),
+          ),
         ),
         const SizedBox(
-          height: Dimens.margin16,
+          height: Dimens.margin24,
         ),
-        Text(
-          description,
-          textAlign: TextAlign.center,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Dimens.margin29),
+          child: Text(
+            description,
+            textAlign: TextAlign.center,
+          ),
         ),
-        const Spacer(),
       ],
     );
   }

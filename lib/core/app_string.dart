@@ -9,4 +9,9 @@ class AppString {
       'Fast and responsibily delivery';
   static const textNext = 'Next';
   static const textGetStarted = 'Get Started';
+  static const textWelcomeToDripsWater = 'Welcome to Drips water';
+  static const textWaterDeliveryApp = 'Water Delivery app';
+  static const textCreateAnAccount = 'CREATE AN ACCOUNT';
+  static const textLogin = 'LOGIN';
+  static const textContinueAsGuest = 'Continue as Guest';
 }

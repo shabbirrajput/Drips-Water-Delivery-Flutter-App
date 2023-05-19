@@ -5,6 +5,7 @@ class AppColors {
   static const colorPrimary = Color(0xff5DCCFC);
   static const colorTransparent = Color(0x00000000);
   static const colorWhite = Color(0xFFFFFFFF);
+  static const colorWhite2 = Color(0xFFF2F2F2);
   static const colorBlack = Color(0xFF000000);
   static const colorBlack1 = Color(0xff212121);
   static const colorBlack54 = Color(0xff212121);
