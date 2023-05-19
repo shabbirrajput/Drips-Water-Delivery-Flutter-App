@@ -3,7 +3,7 @@ import 'package:drips_water/core/app_dimens.dart';
 import 'package:drips_water/core/app_string.dart';
 import 'package:drips_water/screens/dashboard/view/tab/tab_cart.dart';
 import 'package:drips_water/screens/dashboard/view/tab/tab_home.dart';
-import 'package:drips_water/screens/dashboard/view/tab/tab_profile.dart';
+import 'package:drips_water/screens/dashboard/view/tab/tab_account.dart';
 import 'package:flutter/material.dart';
 
 import 'view/tab/tab_favourite_products.dart';
@@ -37,7 +37,7 @@ class _ScreenDashboardState extends State<ScreenDashboard> {
           TabHome(),
           TabCart(),
           TabFavouriteProducts(),
-          TabProfile(),
+          TabAccount(),
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(

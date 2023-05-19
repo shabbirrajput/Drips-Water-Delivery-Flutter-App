@@ -1,3 +1,4 @@
+import 'package:drips_water/core/app_string.dart';
 import 'package:flutter/material.dart';
 
 class TabFavouriteProducts extends StatefulWidget {
@@ -10,6 +11,8 @@ class TabFavouriteProducts extends StatefulWidget {
 class _TabFavouriteProductsState extends State<TabFavouriteProducts> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Text(AppString.textFavourite),
+    );
   }
 }

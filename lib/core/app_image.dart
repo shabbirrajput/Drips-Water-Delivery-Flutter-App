@@ -11,4 +11,5 @@ class AppImage {
   static const String appBnIcon2 = '${filePathImage}bnicon2.svg';
   static const String appBnIcon3 = '${filePathImage}bnicon3.svg';
   static const String appBnIcon4 = '${filePathImage}bnicon4.svg';
+  static const String appSlider = '${filePathImage}slider.svg';
 }

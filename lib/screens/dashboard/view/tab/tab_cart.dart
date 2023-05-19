@@ -1,3 +1,4 @@
+import 'package:drips_water/core/app_string.dart';
 import 'package:flutter/material.dart';
 
 class TabCart extends StatefulWidget {
@@ -10,6 +11,8 @@ class TabCart extends StatefulWidget {
 class _TabCartState extends State<TabCart> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Text(AppString.textCart),
+    );
   }
 }
