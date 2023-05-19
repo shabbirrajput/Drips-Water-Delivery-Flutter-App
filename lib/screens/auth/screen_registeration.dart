@@ -1,6 +1,7 @@
 import 'package:drips_water/core/app_color.dart';
 import 'package:drips_water/core/app_dimens.dart';
 import 'package:drips_water/core/app_string.dart';
+import 'package:drips_water/screens/auth/screen_login.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -175,7 +176,13 @@ class _ScreenRegisterationState extends State<ScreenRegisteration> {
                 height: Dimens.margin60,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ScreenLogin()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.zero)),
@@ -212,7 +219,7 @@ class _ScreenRegisterationState extends State<ScreenRegisteration> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const ScreenRegisteration(),
+                              builder: (context) => const ScreenLogin(),
                             ),
                           );
                         },

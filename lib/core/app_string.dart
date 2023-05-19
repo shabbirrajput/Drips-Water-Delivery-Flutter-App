@@ -33,4 +33,10 @@ class AppString {
   static const textEnterName = 'Enter Name';
   static const textConfirmPassword = 'Confirm Password';
   static const textEnterConfirmPassword = 'Enter Confirm Password';
+  static const textMrProduct = 'Mr Product!';
+  static const textSearchSomething = 'Search Something....';
+  static const textHome = 'Home';
+  static const textCart = 'Cart';
+  static const textFavourite = 'Favourite';
+  static const textAccount = 'Account';
 }

@@ -2,6 +2,7 @@ import 'package:drips_water/core/app_color.dart';
 import 'package:drips_water/core/app_dimens.dart';
 import 'package:drips_water/core/app_string.dart';
 import 'package:drips_water/screens/auth/screen_registeration.dart';
+import 'package:drips_water/screens/dashboard/screen_dashboard.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -138,7 +139,13 @@ class _ScreenLoginState extends State<ScreenLogin> {
                 height: Dimens.margin60,
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ScreenDashboard()),
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.zero)),
